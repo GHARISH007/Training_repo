@@ -1,0 +1,44 @@
+
+
+task to write a program on  abstraction and ovideing methord 
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace hari
+{
+					
+
+	 abstract class pro
+		{ 
+			
+	       public abstract void pro1();
+			 
+	       } 
+	
+	 class pro2:pro	
+	 { 
+	 	 public override void pro1()
+	{
+	  Console.WriteLine("the funtion pro is called");	 
+	  }
+    }
+		
+	
+ public class match()
+ {
+		
+		public static void Main()
+		{
+		 pro2 obj1=new pro2();
+		 obj1.pro1();
+			
+		}
+ 
+	}
+}

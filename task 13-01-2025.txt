@@ -1,0 +1,78 @@
+task 1 
+
+do while 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pro1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            do
+            {
+
+
+                Console.WriteLine(i);
+                i++;
+
+
+
+            } while (i < 27);
+
+        }
+    }
+}
+
+ENCAPSULATION 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web;
+
+namespace pro1
+{
+    public class hi
+        {
+
+        private string name;
+        
+        
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+
+        }
+
+
+        class pro
+        {
+            public static void Main(string[] args)
+            {
+                hi obj1 = new hi();
+                obj1.Name = "harish";
+                Console.WriteLine(obj1.Name);
+                
+            }
+            
+        }
+
+    }
+}
+

@@ -1,0 +1,177 @@
+task 1
+------------------------------------------------------------------
+private protected
+
+
+console1
+
+ using System;
+
+
+namespace ConsoleApp1
+{
+
+    public class top2
+    {
+
+        private protected void dis()
+        {
+            Console.WriteLine("LIGHT ON 123");
+
+        }
+
+
+    }
+        public class top1 : top2
+
+        {
+            public static void Main(string[] args)
+            {
+
+                top1 obj1 = new top1();
+                obj1.dis();
+
+
+
+
+
+
+            }
+
+
+
+
+        }
+    }
+
+    
+
+task 2
+
+-----------------------------------------------------
+protected internal
+
+
+
+console1
+
+
+  using System;
+   
+
+    namespace ConsoleApp1
+    {
+
+        public class top2
+        {
+
+              protected internal void dis()
+            {
+                Console.WriteLine("LIGHT ON");
+                
+            }
+
+
+
+        public class top1 : top2
+
+        {
+
+        }
+    }
+        
+
+       
+    }
+
+
+
+-----------------------------------
+console2
+
+using System;
+using ConsoleApp1;
+
+namespace ConsoleApp2
+{
+
+
+    public class top1 : top2
+
+    {
+
+
+        public static void Main(string[] args)
+        {
+
+            top1 obj1 = new top1();
+            obj1.dis();
+
+
+
+
+
+
+        }
+
+
+
+    }
+
+
+
+    }
+
+
+
+task 3 
+--------------------------------------
+namespace
+
+
+using System; 
+using first1;
+using second;
+
+
+
+namespace first1 
+{ 
+	public class button
+	{
+		
+		public void blue()
+		{
+		Console.WriteLine("display blue ");
+		}
+	}
+	
+	
+}
+
+
+namespace second
+{
+	public class button2
+	{
+		public void red()
+		{
+			Console.WriteLine("diplay  red");
+	}
+	
+	}
+}
+	class exec()
+	{
+	public static void Main()
+	{
+		
+		first1.button cs=new first1.button();
+		second.button2 ms=new second.button2();
+		cs.blue();
+		ms.red();
+		
+	}
+}
+
+

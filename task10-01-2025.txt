@@ -1,0 +1,78 @@
+
+TASK -1
+ 
+using System;
+using System.Linq;
+using System.Collections.Generic;
+ 
+					
+public class Program
+{
+	public static void Main()
+	{
+	
+		int[] nums = { 1, 2, 5, 4, 3, 55, 23, 2 };
+		Array.Sort(nums);
+		int[] Dis= nums.Distinct().ToArray();
+	List<int>a=Dis.OfType<int>().ToList();
+		
+		foreach(int x in a )
+		{
+			Console.WriteLine(x);
+		}
+	
+}
+}
+
+Task 2
+
+inheritance concept
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HARISH1
+{
+
+
+
+    class b
+        public void  standard1()
+        {
+            Console.WriteLine("good section");
+        }
+    }
+
+    class  topers:b
+        public void  standard 2()
+        {
+            Console.WriteLine("good students");
+        }
+    }
+
+    class average:b
+    {
+        public void standard3()
+        {
+            Console.WriteLine("good but not bad");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            b   b1= new  b(); 
+           
+
+
+           b1.standard1();
+           
+        }
+    }
+
+}   
+    

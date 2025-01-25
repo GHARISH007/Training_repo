@@ -1,0 +1,122 @@
+task 1
+write a program on run time polymorphism
+
+using System;
+					
+
+
+
+namespace harish
+{
+					
+public class computersci
+{
+ public virtual void sectionA()
+ {
+Console.WriteLine("the best section"); 	 
+ }
+}
+
+public class commerce:computersci
+{
+ public  override void sectionA()
+ {
+Console.WriteLine("the worst section"); 
+ }
+}
+
+public class program()
+{
+	
+	public static void Main()
+	{
+ computersci obj1=new commerce();
+	obj1.sectionA();
+
+	
+	}
+}
+}
+
+
+task 2
+
+write a pragram on compile time polymorphism
+
+using System;
+
+
+namespace harsih
+{
+					
+       public class prog
+         {
+        public int  a,b,c;
+         public int count(int a,int b)
+             {
+			 int sum1=a+b;
+           return sum1;
+              }
+
+           public int count( int a, int b, int c)
+                 {
+			    int sum2= a+b+c;
+	           return sum2;	
+                    }
+             }
+
+      public class pro()
+
+       {
+	     public static void Main(string[] argS)
+	        {
+                prog obj2=new prog();
+	         int sum1= obj2.count(23,66,33);
+	         	Console.WriteLine("count  "   +sum1);
+			 int sum2 =obj2.count(23,66);
+			 Console.WriteLine("count  "  +sum2);
+
+	 
+		
+         	}
+	
+       }
+}
+
+task3
+
+using System;
+					
+
+	abstract class Animal
+{
+  
+  public abstract void animalSound();
+
+  public void sleep()
+  {
+    Console.WriteLine("Zzz");
+  }
+}
+
+
+class Pig : Animal
+{
+  public override void animalSound()
+  {
+   
+    Console.WriteLine("The pig says: wee wee");
+  }
+}
+
+class Progra
+{
+  static void Main(string[] args)
+  {
+    Pig myPig = new Pig(); 
+    myPig.animalSound();  
+    myPig.sleep();  
+}
+}
+
+	

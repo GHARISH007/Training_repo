@@ -1,0 +1,178 @@
+task1 
+
+private access specifier
+
+using System;
+					
+ class pro
+{
+ 
+ private string b="how are you";
+    
+public static void Main(string[] args)
+
+	 {
+
+                   pro obj1= new pro();
+		 
+	 Console.WriteLine(obj1.b);
+	     
+	 }	 
+	
+	}
+---------------------------------------------------------
+
+public acces specifiers
+
+
+using System;
+					
+ class pro
+{
+  public string a="hi there";
+	
+	 
+	 }
+
+
+class art
+{
+	
+	public static void Main(string[] args)
+
+	 {
+		 pro obj1= new pro();
+		 Console.WriteLine(obj1.a);
+		 
+	 }
+}
+
+---------------------------------------------
+protected class
+
+
+
+
+using System;
+					
+ class pro
+{
+protected  string b="hi there";
+
+ 
+
+public void rig()
+{
+Console.WriteLine(b);	
+	
+}
+ }
+
+class pro2:pro
+{
+
+}
+	 
+	 
+	
+
+
+
+class art
+{
+	
+	public static void Main(string[] args)
+
+	 {
+		 pro2 obj1= new pro2();
+		
+		 obj1.rig();
+		
+		//Console.WriteLine(obj1.b);
+		
+		 
+	 }
+	 
+}
+----------------------------------
+internal acces specifier class
+
+
+(consolapp1.cs)
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+
+    public class harish
+    {
+
+
+        internal void harish2()
+        {
+            Console.WriteLine("hi there24");
+        }
+
+    }
+
+
+    public class hema:harish
+    {
+        
+    }
+
+    public class hi
+    {
+
+
+    }
+}
+
+
+(consoleapp2)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    
+
+    public class footbal
+
+     {
+
+
+        public static void Main(string[] args)
+        {
+
+            hema obj1 = new hema();
+            obj1.harish2();
+
+        }
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+

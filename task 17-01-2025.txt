@@ -1,0 +1,97 @@
+
+Task 1
+
+
+
+using System;
+
+
+namespace pro1
+{
+   public class hi
+    {
+        public static void Main(string[] args)
+        {
+            int i, fact = 1;
+
+
+            int number = Convert.ToInt32(Console.ReadLine());
+            for (i = 1;i <= number; i++)
+
+            {
+
+                fact = fact * i;
+
+            }
+            Console.WriteLine("the factorial for given number" + fact);
+
+        }
+    }
+
+    
+}
+
+
+task 2 find 
+
+assending and desending order using array
+using System;
+using System.Linq;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+	//  int []a ={ 45,67,88,99,30,89,89};	
+	
+	//Array.Sort(a);
+	///	int []dis= a.Distinct().ToArray();
+	//foreach( int i in dis )
+	//	{
+	//		
+	//	Console.WriteLine(i);
+	//	}
+  //} 
+	
+	 int []a ={ 45,67,88,99,30,89,30};	
+		Array.Sort(a,(a,b)=>b.CompareTo(a));
+	int []dis= a.Distinct().ToArray();
+	foreach( int i in dis )
+		{
+			
+		Console.WriteLine(i);
+		}
+		
+	}
+}
+
+task 3
+
+finding oddd or even for given number using array concept
+
+using System;
+using System.Linq;
+
+namespace odd;
+					
+public class Program
+	
+{   
+	public static void Main(String[] args)
+	{
+	 int []a ={ 45,67,88,99,30,89,30};
+		
+	 foreach( int i in a)
+	 {
+		 if(i%2==0)
+		 {
+			 Console.WriteLine("the number is even",i);
+		 } 
+		 else 
+		 {
+			 Console.WriteLine("the number is odd",i);
+		 }
+	 }
+}
+}

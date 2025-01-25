@@ -1,0 +1,109 @@
+TASK1 
+polymorphism concept  
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HARISH1
+{
+
+
+
+    class car
+    {
+        public void wheel()
+        {
+            Console.WriteLine("four wheeler");
+        }
+    }
+
+    class bike : car
+    {
+        public void wheel()
+        {
+            Console.WriteLine("two wheeler");
+        }
+    }
+
+    class truck : car
+    {
+        public void wheel()
+        {
+            Console.WriteLine("six wheeler");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           car  mycar = new car(); 
+          car mybike = new bike(); 
+         car mytruck = new truck(); 
+
+            mycar.wheel();
+            mybike.wheel();
+            mytruck.wheel();
+        }
+    }
+
+} 
+
+
+Overiding concept 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HARISH1
+{
+
+
+
+    class car
+    {
+        public virtual void wheel()
+        {
+            Console.WriteLine("four wheeler");
+        }
+    }
+
+    class bike : car
+    {
+        public override void wheel()
+        {
+            Console.WriteLine("two wheeler");
+        }
+    }
+
+    class truck : car
+    {
+        public void  override wheel()
+        {
+            Console.WriteLine("six wheeler");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           car  mycar = new car(); 
+          car mybike = new bike(); 
+         car mytruck = new truck(); 
+
+            mycar.wheel();
+            mybike.wheel();
+            mytruck.wheel();
+        }
+    }
+
+} 
+    
