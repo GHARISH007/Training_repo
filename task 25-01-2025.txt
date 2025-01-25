@@ -1,0 +1,116 @@
+task 1
+write program using interface concept 
+
+
+using System;
+namespace form
+
+{
+					
+interface button
+{
+ 
+	 public void sum();
+
+}
+
+interface light
+{
+	
+	public void sub();
+	
+	
+}
+
+public  class face:button,light
+{
+       public void sum()
+         {
+          Console.WriteLine("hi there");
+            }
+
+       public void sub()
+         {
+         Console.WriteLine("hi there how are you");
+              
+}
+
+
+
+public class pro
+{
+
+public static void Main()
+{
+face obj1= new face();
+ obj1.sum();
+ obj1.sub();
+ }
+}
+}
+}
+
+
+task 2
+------------------------------------
+write a program on enumration class
+
+
+using System;
+
+
+
+enum face
+{
+	observation,
+	voice,
+	face
+	
+}
+
+
+public class pro
+{
+
+public static void Main(String[] args)
+{
+face obj1=face.voice;	
+	Console.WriteLine(obj1);
+}
+	
+}
+--------------------------------------------
+task 3
+
+exceptional handling 
+
+
+sing System;
+
+
+namespace button
+	
+{
+	public class face
+	{
+		public static void Main(String[] args)
+		{
+		
+		try
+		{
+		 int []a={2,4,34};
+		 Console.WriteLine(a[10]);
+		}
+		catch (Exception e)
+		{
+			Console.WriteLine("exception is catched");
+		}
+		
+	finally 
+	{ 
+		Console.WriteLine("array  memory not fulled");
+		
+	}
+	}
+	}
+} 
