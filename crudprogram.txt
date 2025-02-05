@@ -1,0 +1,120 @@
+task to create a c# program for crud operation
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Program
+{
+    class Program
+    {
+        struct student
+        {
+            public string stid;
+            public string stname;
+            public string stage;
+
+        };
+        static void Main(string[] args)
+        {
+            student[] st = new student[4];
+            int choice;
+            string confirm;
+
+            int i = 0;
+            Console.WriteLine("Select operation to Perform");
+            Console.WriteLine("1. ADD");
+            Console.WriteLine("2. UPDATE");
+            Console.WriteLine("3. DELETE");
+            Console.WriteLine("4. SHOW");
+            do
+            {
+                Console.Write("enter your choice(1-4):");
+                choice = Convert.ToInt32(Console.ReadLine());
+                                                            
+                switch (choice)
+                {
+                    case 1:
+                        Add(st, i);
+                        i++;
+                        break;
+                    case 2:
+                        Update(st);
+                        break;
+                    case 3:
+                        Delete(st);
+                        break;
+                    case 4:
+                        Show(st);
+                        break;
+                    default:
+                        Console.WriteLine("\nInvalid Selection\n");
+                        break;
+                }
+
+                Console.Write("Press Y or y to continue:");
+
+                confirm = Console.ReadLine().ToString();
+            } while (confirm == "Y" || confirm == "y");
+
+
+        
+             ;
+        }
+
+        static void Add(student[] st, int i)
+        {
+            Console.Write("\nEnter student ID: ");
+            st[i].stid = Console.ReadLine();
+            Console.Write("Enter student name: ");
+            st[i].stname = Console.ReadLine();
+            Console.Write("Enter student age: ");
+            st[i].stage = Console.ReadLine();
+            Console.WriteLine("ADDED");
+        }
+        static void Show(student[] st)
+        {
+            for (int i = 0; i < st.Length; i++)
+            {
+                if (st[i].stid != null)
+                {
+                    Console.WriteLine("\nStudent ID : " + st[i].stid);
+                    Console.WriteLine("Student Name : " + st[i].stname);
+                    Console.WriteLine("Student Age : " + st[i].stage);
+                }
+            }
+        }
+        static void Delete(student[] st)
+        {
+            Console.Write("\nEnter student ID: ");
+            string studid = Console.ReadLine();
+            for (int i = 0; i < st.Length; i++)
+            {
+                if (studid == st[i].stid)
+                {
+                    st[i].stid = null;
+                    st[i].stname = null;
+                    st[i].stage = null;
+                    Console.WriteLine("deleted");
+                }
+            }
+        }
+        static void Update(student[] st)
+        {
+            Console.Write("\nEnter student ID: ");
+            string studid = Console.ReadLine();
+            for (int i = 0; i < st.Length; i++)
+            {
+                if (studid == st[i].stid)
+                {
+                    Console.Write("Enter student name: ");
+                    st[i].stname = Console.ReadLine();
+                    Console.Write("Enter student age: ");
+                    st[i].stage = Console.ReadLine();
+                    Console.WriteLine("UPDATED");
+                }
+            }
+        }
+    }
+}
